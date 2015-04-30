@@ -17,6 +17,7 @@
 		EF04570D1AF08B2A00B51639 /* View3Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04570C1AF08B2A00B51639 /* View3Controller.swift */; };
 		EF04570F1AF0F28000B51639 /* ViewWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF04570E1AF0F28000B51639 /* ViewWebViewController.swift */; };
 		EF0457111AF0F56D00B51639 /* table.html in Resources */ = {isa = PBXBuildFile; fileRef = EF0457101AF0F56D00B51639 /* table.html */; };
+		EF3F321B1AF1DC4100FB7AD6 /* ViewPressController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF3F321A1AF1DC4100FB7AD6 /* ViewPressController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		EF04570C1AF08B2A00B51639 /* View3Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3Controller.swift; sourceTree = "<group>"; };
 		EF04570E1AF0F28000B51639 /* ViewWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewWebViewController.swift; sourceTree = "<group>"; };
 		EF0457101AF0F56D00B51639 /* table.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = table.html; sourceTree = "<group>"; };
+		EF3F321A1AF1DC4100FB7AD6 /* ViewPressController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewPressController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 				EF0457081AF073FA00B51639 /* View2Controller.swift */,
 				EF04570C1AF08B2A00B51639 /* View3Controller.swift */,
 				EF04570E1AF0F28000B51639 /* ViewWebViewController.swift */,
+				EF3F321A1AF1DC4100FB7AD6 /* ViewPressController.swift */,
 			);
 			path = Demo1;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			files = (
 				EF00C26E1AEF9DC6004826BC /* ViewController.swift in Sources */,
 				EF0457091AF073FA00B51639 /* View2Controller.swift in Sources */,
+				EF3F321B1AF1DC4100FB7AD6 /* ViewPressController.swift in Sources */,
 				EF04570D1AF08B2A00B51639 /* View3Controller.swift in Sources */,
 				EF04570F1AF0F28000B51639 /* ViewWebViewController.swift in Sources */,
 				EF00C26C1AEF9DC6004826BC /* AppDelegate.swift in Sources */,

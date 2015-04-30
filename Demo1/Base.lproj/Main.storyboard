@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="154" y="361" width="75" height="30"/>
+                                    <rect key="frame" x="143" y="130" width="75" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="chengeText:" destination="vXZ-lx-hvc" eventType="touchDown" id="085-H2-kUA"/>
@@ -34,7 +34,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="113" y="170" width="174" height="30"/>
+                                    <rect key="frame" x="105" y="48" width="174" height="30"/>
                                 </variation>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvR-nl-Gr0">
@@ -43,7 +43,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="43" y="465" width="60" height="30"/>
+                                    <rect key="frame" x="22" y="225" width="60" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="Qqv-EI-XnO" kind="show" id="HTh-1u-15k"/>
@@ -55,10 +55,22 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="110" y="465" width="119" height="30"/>
+                                    <rect key="frame" x="83" y="225" width="119" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="5Fc-If-DbV" kind="show" id="E2W-LP-4R6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mPj-3A-7sW">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="指示器和进度条">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="275" y="225" width="109" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="udE-Hf-qL3" kind="show" id="Yo1-6m-WIt"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mrd-ua-fRE">
@@ -67,7 +79,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="237" y="465" width="63" height="30"/>
+                                    <rect key="frame" x="204" y="225" width="63" height="30"/>
                                 </variation>
                                 <connections>
                                     <segue destination="yoL-m0-s5m" kind="show" id="bD2-eG-27V"/>
@@ -79,6 +91,7 @@
                             <mask key="subviews">
                                 <exclude reference="cvR-nl-Gr0"/>
                                 <exclude reference="IHW-ml-TQK"/>
+                                <exclude reference="mPj-3A-7sW"/>
                                 <exclude reference="Mrd-ua-fRE"/>
                             </mask>
                         </variation>
@@ -86,6 +99,7 @@
                             <mask key="subviews">
                                 <include reference="cvR-nl-Gr0"/>
                                 <include reference="IHW-ml-TQK"/>
+                                <include reference="mPj-3A-7sW"/>
                                 <include reference="Mrd-ua-fRE"/>
                             </mask>
                         </variation>
@@ -98,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-205.5" y="336"/>
+            <point key="canvasLocation" x="-646.5" y="653"/>
         </scene>
         <!--View3 Controller-->
         <scene sceneID="Jve-jg-QEE">
@@ -263,7 +277,59 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TUx-TN-Jot" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="691.5" y="849.75"/>
+            <point key="canvasLocation" x="691.5" y="844"/>
+        </scene>
+        <!--View Press Controller-->
+        <scene sceneID="rxi-jP-mdE">
+            <objects>
+                <viewController id="udE-Hf-qL3" customClass="ViewPressController" customModule="Demo1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="lIV-X0-R2I"/>
+                        <viewControllerLayoutGuide type="bottom" id="6p1-yb-HBA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Brx-0d-Pib">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gvc-y9-ATK">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="指示器开始">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="145" y="120" width="97" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="controlIndicator:" destination="udE-Hf-qL3" eventType="touchUpInside" id="GXo-IX-ESU"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Nsl-hX-PGD">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="183" y="43" width="20" height="20"/>
+                                </variation>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="gvc-y9-ATK"/>
+                                <exclude reference="Nsl-hX-PGD"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="gvc-y9-ATK"/>
+                                <include reference="Nsl-hX-PGD"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="myIndicator" destination="Nsl-hX-PGD" id="PIy-aa-a9o"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FEs-Wu-vi0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691.5" y="1477"/>
         </scene>
         <!--View2 Controller-->
         <scene sceneID="NU6-E4-YC8">
