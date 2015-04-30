@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        html,body{
+            padding: 0;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 13px;
+        }
+        .v5cn-table{
+            border: 1px #333333 solid;
+            border-collapse: collapse;
+            width: 870px;
+            text-align:center;
+            table-layout: fixed;
+        }
+        .v5cn-table caption{
+            line-height: 60px;
+            font-size: 18px;
+        }
+        .v5cn-table tr td{
+            border:1px #333333 solid;
+            line-height: 30px;
+        }
+        .v5cn-title{
+            background-color:#649ED4;
+            color:#FFFFFF;
+        }
+        .v5cn-table .v5cn-title td{
+            line-height: 40px;
+        }
+        .v5cn-first-column{
+            width: 100px;
+        }
+
+        .v5cn-table-title{
+            font-size: 18px;
+            font-weight: normal;
+        }
+
+        /****单元格背景色***/
+        .v5cn-red{
+            background-color:#FC2502;
+        }
+        .v5cn-orange{
+            background-color:#FD9902;
+        }
+        .v5cn-green{
+            background-color:#028002;
+        }
+
+        /**机能系统表的首列宽**/
+        .v5cn-jnxt{
+            width: 200px;
+        }
+        /**症状表**/
+        .v5cn-zz{
+            table-layout: auto;
+        }
+        .v5cn-zz-col1{
+            width: 45px;
+        }
+        .v5cn-zz-col2{
+            width: 120px;
+        }
+        .v5cn-zz-col3{
+            text-align: left;
+        }
+        #chart{
+            left:50%;
+        }
+    </style>
+</head>
+<body>
+    <h1>用户检查数据报告</h1>
+    <table class="v5cn-table" align="center">
+        <caption>经络检查值</caption>
+        <tr>
+            <td class="v5cn-first-column"></td>
+            <td colspan="5">左</td>
+            <td colspan="5">右</td>
+        </tr>
+        <tr class="v5cn-title">
+            <td>经络名称</td>
+            <td>L2</td>
+            <td>L1</td>
+            <td>AVG</td>
+            <td>H1</td>
+            <td>H2</td>
+            <td>L2</td>
+            <td>L1</td>
+            <td>AVG</td>
+            <td>H1</td>
+            <td>H2</td>
+        </tr>
+        <tr>
+            <td>肺经</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>50</td>
+            <td></td>
+            <td></td>
+            <td>19</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>三焦经</td>
+            <td>13</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>14</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>胆经</td>
+            <td>17</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>45</td>
+        </tr>
+        <tr>
+            <td>肝经</td>
+            <td></td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>24</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>大肠经</td>
+            <td></td>
+            <td></td>
+            <td>54</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>26</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>胃经</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>26</td>
+            <td></td>
+            <td>34</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>脾经</td>
+            <td></td>
+            <td>45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>67</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>12</td>
+        </tr>
+        <tr>
+            <td>心经</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>小肠经</td>
+            <td></td>
+            <td></td>
+            <td>45</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>膀胱经</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>56</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>78</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>肾经</td>
+            <td></td>
+            <td>23</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>56</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>心包经</td>
+            <td></td>
+            <td></td>
+            <td>12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>45</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="v5cn-table" align="center">
+        <caption>整体判读</caption>
+        <tr class="v5cn-title">
+            <td>指标</td>
+            <td>结果值</td>
+            <td>结论</td>
+        </tr>
+        <tr>
+            <td>整体能量指数</td>
+            <td>30.4523</td>
+            <td>正常</td>
+        </tr>
+        <tr>
+            <td>阴阳比值(新陈代谢指数)</td>
+            <td>1.56432</td>
+            <td>正常</td>
+        </tr>
+        <tr>
+            <td>上下比值(精神状态指数)</td>
+            <td>0.78976</td>
+            <td>正常</td>
+        </tr>
+        <tr>
+            <td>左右比值(筋骨氣血指数)</td>
+            <td>5.9809</td>
+            <td>正常</td>
+        </tr>
+        <tr>
+            <td>大小比值(自律神經指数)</td>
+            <td>4.9097</td>
+            <td>正常</td>
+        </tr>
+    </table>
+    <table class="v5cn-table" align="center">
+        <caption>机能系统报告</caption>
+        <tr class="v5cn-title">
+            <td class="v5cn-jnxt">机能系统</td>
+            <td>&#9733;&#9733;&#9733;&#9733;&#9733;</td>
+            <td>&#9733;&#9733;&#9733;&#9733;</td>
+            <td>&#9733;&#9733;&#9733;</td>
+            <td>&#9733;&#9733;</td>
+            <td>&#9733;</td>
+        </tr>
+        <tr>
+            <td>心脏血液循环系统</td>
+            <td class="v5cn-red"></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>免疫(淋巴)系统</td>
+            <td></td>
+            <td></td>
+            <td class="v5cn-orange"></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>消化系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td class="v5cn-green"></td>
+        </tr>
+        <tr>
+            <td>呼吸系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>神经系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>内分泌系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>生殖泌尿系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>皮肤系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>骨骼系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>机构系统</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>肝功能</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>肾功能</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>睡眠指数</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <!--
+    <h3 class="v5cn-table-title">经络历史值对比</h3>
+    图表
+    <div id="chart" style="width: 950px;height: 300px;left:50%;margin: 0 auto;padding: 0;"></div>
+	-->
+    <table class="v5cn-table v5cn-zz" align="center">
+        <caption>症状</caption>
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col1">序号</td>
+            <td class="v5cn-zz-col2">症状名称</td>
+            <td>症状描述</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+    <h3 class="v5cn-table-title">居家建议</h3>
+    <span>症状1:嗓子发炎</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+    <br/>
+    <span>症状2:呼吸道感染</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+    <br/>
+    <span>家居建议汇总</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+    <h3 class="v5cn-table-title">专业建议</h3>
+    <span>症状1:嗓子发炎</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>花草茶调理</td>
+            <td class="v5cn-zz-col3">薄荷</td>
+        </tr>
+    </table>
+    <br/>
+    <span>症状2:呼吸道感染</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>保健营养品建议</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>负离子水疗</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>特别提醒</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+    <br/>
+    <span>专业建议汇总</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>保健营养品建议</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>负离子水疗</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>特别提醒</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+    <h3 class="v5cn-table-title">专家建议</h3>
+    <span>症状1:嗓子发炎</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>花草茶调理</td>
+            <td class="v5cn-zz-col3">薄荷</td>
+        </tr>
+    </table>
+    <br/>
+    <span>症状2:呼吸道感染</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>保健营养品建议</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>负离子水疗</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>特别提醒</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+    <br/>
+    <span>专家建议汇总</span>
+    <table class="v5cn-table v5cn-zz" align="center">
+        <tr class="v5cn-title">
+            <td class="v5cn-zz-col2">建议类别</td>
+            <td>建议内容</td>
+        </tr>
+        <tr>
+            <td>保健营养品建议</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>负离子水疗</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>特别提醒</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>嗓子发炎</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+        <tr>
+            <td>呼吸道感染</td>
+            <td class="v5cn-zz-col3">呼吸道不适，嗓子痒、鼻噻、打喷嚏等症状，撑部大拇指疼痛不可触摸，干咳胸痛严重，头疼、全身乏力，颈肩背的酸痛。</td>
+        </tr>
+    </table>
+</body>
+</html>
