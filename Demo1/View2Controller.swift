@@ -55,6 +55,8 @@ class View2Controller : UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationItem.title = "Switch"
+        self.navigationController?.navigationBar.backgroundColor = UIColor.redColor()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
